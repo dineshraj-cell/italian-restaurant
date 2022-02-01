@@ -1,0 +1,34 @@
+header {
+    width: 100%;
+    height: 5rem;
+    background-color: $color-secondary-background;
+    color: $color-secondary-background-text;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-tools {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+.total-amount {
+    border: 2px solid $color-field-borders;
+    color: $color-secondary-background-text;
+    font-weight: $font-body-weight-bold;
+    padding: 0.25rem;
+}
+
+//Phone style
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .total-amount {
+        display: none;
+    }
+}
+
+//tablet style
+@media only screen and (min-width: 768px) and (max-width: 1024px) {}

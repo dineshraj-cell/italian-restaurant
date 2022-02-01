@@ -1,0 +1,14 @@
+.btn {
+    padding: 0;
+    border: 0;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    &-icon {
+        color: $color-secondary-background-text;
+        &:hover {
+            color: lighten($color: $color-secondary-background-text, $amount: 30);
+        }
+    }
+}

@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/style.css";
+import SearchIcon from "@mui/icons-material/Search";
+import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 
 function App() {
+  const amount = "0.00";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container">
+      <header className="center-align">
+        <div className="view-content nav">
+          <h1>Giallo</h1>
+          <div className="nav-tools">
+            <button className="btn btn-icon">
+              <SearchIcon />
+            </button>
+            <button className="btn center-align ml-half btn-icon">
+              <LocalMallOutlinedIcon />
+              <span className="total-amount ml-half">{` $${amount} CAD`}</span>
+            </button>
+          </div>
+        </div>
       </header>
+      <main>Main Component</main>
+      <footer>Footer Area</footer>
     </div>
   );
 }
