@@ -142,6 +142,36 @@
   margin-left: 0.5rem;
 }
 
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.category-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.banner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .btn {
   padding: 0;
   border: 0;
@@ -201,8 +231,157 @@ header {
   padding: 0.25rem;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   .total-amount {
+    display: none;
+  }
+}
+
+.banner {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, #faf3ec), color-stop(0%, #fffbf6));
+  background: linear-gradient(180deg, #faf3ec 70%, #fffbf6 0%);
+}
+
+.banner-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.banner-content {
+  width: 40%;
+}
+
+.banner-title {
+  font-size: 5em;
+  line-height: 1.3;
+  font-family: Cardo, serif;
+  letter-spacing: 0.25rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.banner-img {
+  width: 80%;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .banner-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .banner-content {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .banner-title {
+    font-size: 4em;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .banner-content {
+    width: 40%;
+  }
+  .banner-title {
+    font-size: 3em;
+    text-align: start;
+  }
+}
+
+.category {
+  background: #fffbf6;
+  height: 5rem;
+}
+
+.category-title {
+  font-size: 2rem;
+  margin-right: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  color: #4d4d4d;
+  position: relative;
+  cursor: pointer;
+}
+
+.category-title::after {
+  content: '';
+  border-bottom: 2px solid black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.category-title:hover {
+  color: #000000;
+}
+
+.category-title:hover::after {
+  width: 100%;
+}
+
+.category-count {
+  font-size: 0.5em;
+  vertical-align: top;
+}
+
+.category-active {
+  color: #000000;
+}
+
+.category-active::after {
+  content: '';
+  border-bottom: 2px solid black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .category {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+  .category-container {
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .category-container::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .category-container {
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .category-container::-webkit-scrollbar {
     display: none;
   }
 }
@@ -215,20 +394,11 @@ body {
   font-family: Cardo, serif;
 }
 
-.center-align {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .view-content {
   width: 80%;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   .view-content {
     width: 95%;
   }

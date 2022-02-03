@@ -1,0 +1,15 @@
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+%flex-start {
+    display: flex;
+    justify-content: start;
+}
+
+%flex-space-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
