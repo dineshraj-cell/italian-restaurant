@@ -1,25 +1,12 @@
 import "./styles/style.css";
-import SearchIcon from "@mui/icons-material/Search";
-import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
+import HeaderComponent from "./Components/HeaderComponent.tsx";
+import CategoriesComponent from "./Components/CategoriesComponent.tsx";
+import MenuComponent from "./Components/MenuComponent.tsx";
 
 function App() {
-  const amount = "0.00";
   return (
     <div className="container">
-      <header className="flex-center">
-        <div className="view-content nav">
-          <h1>Giallo</h1>
-          <div className="nav-tools">
-            <button className="btn btn-icon">
-              <SearchIcon />
-            </button>
-            <button className="btn flex-center ml-half btn-icon">
-              <LocalMallOutlinedIcon />
-              <span className="total-amount ml-half">{` $${amount} CAD`}</span>
-            </button>
-          </div>
-        </div>
-      </header>
+      <HeaderComponent />
       <main className="main-container">
         <section className="flex-center banner">
           <div className="view-content banner-container">
@@ -35,30 +22,8 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="flex-center category">
-          <div className="view-content category-container">
-            <div className="category-title category-active">
-              <div>
-                Fresh meals <span className="category-count">6</span>
-              </div>
-            </div>
-            <div className="category-title">
-              <div>
-                Pasta <span className="category-count">16</span>
-              </div>
-            </div>
-            <div className="category-title">
-              <div>
-                Drinks & Desserts <span className="category-count">4</span>
-              </div>
-            </div>
-            <div className="category-title">
-              <div>
-                Merchandise <span className="category-count">6</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CategoriesComponent />
+        <MenuComponent />
       </main>
       <footer>Footer Area</footer>
     </div>

@@ -386,6 +386,108 @@ header {
   }
 }
 
+.menu-item-cost, .menu-item-desc {
+  font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #746b60;
+}
+
+.menu {
+  background: #fffbf6;
+  padding-top: 2rem;
+}
+
+.menu-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.menu-card {
+  padding: 0 1rem;
+  width: 50%;
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+  cursor: pointer;
+}
+
+.menu-card:hover {
+  -webkit-box-shadow: 10px 10px 25px #00000024;
+          box-shadow: 10px 10px 25px #00000024;
+}
+
+.menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 2rem 0rem;
+  position: relative;
+}
+
+.menu-item-section-area {
+  width: 75%;
+}
+
+.menu-item-section-image {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.menu-item-section-image-container {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background-position: 50% 50% !important;
+  background-size: cover !important;
+}
+
+.menu-item-title {
+  font-family: Cardo, serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: .05rem;
+  line-height: 1.1;
+  font-size: 2rem;
+}
+
+.menu-item-title:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+.menu-item-cost {
+  margin: 1em 0;
+  letter-spacing: .05rem;
+}
+
+.menu-item::after {
+  content: '';
+  border: 0.2px solid #dad0ca;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.menu-item:hover::after {
+  border: none;
+}
+
 body {
   margin: 0;
   padding: 0;

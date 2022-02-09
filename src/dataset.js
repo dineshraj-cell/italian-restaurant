@@ -1,4 +1,4 @@
-export const category = [
+export const CATEGORY = [
   {
     category: "Fresh Meals",
     id: 1,
@@ -17,7 +17,7 @@ export const category = [
   },
 ];
 
-export const menu = [
+export const MENU = [
   {
     category_id: 1,
     food: "Lasagna",
