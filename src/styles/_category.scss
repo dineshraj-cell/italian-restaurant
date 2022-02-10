@@ -12,6 +12,7 @@
         white-space: nowrap;
         color: lighten($color: $color-secondary-background-text, $amount: 30);
         position: relative;
+        user-select: none;
         &::after {
             content: '';
             border-bottom: 2px solid black;

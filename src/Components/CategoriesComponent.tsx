@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
+import { useCategory, useCategoryUpdate } from "../contexts/CategoryContext";
 import { CATEGORY, MENU } from "../dataset";
 import { Category } from "../Interface/MenuInterface";
 
 function CategoriesComponent() {
-  const [activeCategory, setActiveCategory] = useState(CATEGORY[0]);
+  const activeCategory = useCategory();
+  const updateActiveCategory = useCategoryUpdate();
 
   const handleCategoryClick = (item: Category) => {
-    setActiveCategory(item);
+    updateActiveCategory(item);
   };
 
   return (

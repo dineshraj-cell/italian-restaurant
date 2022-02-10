@@ -2,6 +2,8 @@ import "./styles/style.css";
 import HeaderComponent from "./Components/HeaderComponent.tsx";
 import CategoriesComponent from "./Components/CategoriesComponent.tsx";
 import MenuComponent from "./Components/MenuComponent.tsx";
+import React from "react";
+import CategoryContext from "./contexts/CategoryContext";
 
 function App() {
   return (
@@ -22,8 +24,10 @@ function App() {
             </div>
           </div>
         </section>
-        <CategoriesComponent />
-        <MenuComponent />
+        <CategoryContext>
+          <CategoriesComponent />
+          <MenuComponent />
+        </CategoryContext>
       </main>
       <footer>Footer Area</footer>
     </div>
