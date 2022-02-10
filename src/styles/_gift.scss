@@ -1,0 +1,69 @@
+.gift {
+    background: $color-background;
+    &-container {
+        padding: 4rem 15rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    &-img {
+        width: 40%;
+    }
+    &-content {
+        width: 40%;
+    }
+    &-title {
+        font-family: $font-heading-family;
+        font-weight: $font-heading-weight;
+        font-style: $font-heading-style;
+        letter-spacing: .05rem;
+        line-height: 0.7;
+        font-size: 3rem;
+        margin: 0.5em 0em;
+    }
+    &-rate {
+        @extend %body-text-default;
+        letter-spacing: .05rem;
+    }
+    &-desc {
+        @extend %body-text-default;
+        letter-spacing: .05rem;
+        line-height: 1.5;
+    }
+    &-button {
+        margin: 2rem 0rem;
+        width: 100%;
+        @extend %button-default;
+        padding: 1.2em 2.4em;
+        font-weight: $font-body-weight-bold;
+        border: 1px solid $color-field-borders;
+        &:hover {
+            box-shadow: 0 0 0 .1rem $color-field-borders;
+        }
+    }
+}
+
+//Phone style
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .gift {
+        &-container {
+            padding: 4rem 3rem;
+            flex-direction: column;
+        }
+        &-img {
+            width: 100%;
+        }
+        &-content {
+            width: 100%;
+        }
+    }
+}
+
+//tablet style
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .gift {
+        &-container {
+            padding: 4rem 3rem;
+        }
+    }
+}

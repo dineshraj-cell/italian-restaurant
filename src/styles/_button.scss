@@ -1,10 +1,14 @@
-.btn {
+%button-default {
     padding: 0;
     border: 0;
     user-select: none;
     outline: none;
     cursor: pointer;
     background-color: transparent;
+}
+
+.btn {
+    @extend %button-default;
     &-icon {
         color: $color-secondary-background-text;
         &:hover {

@@ -4,6 +4,8 @@ import CategoriesComponent from "./Components/CategoriesComponent.tsx";
 import MenuComponent from "./Components/MenuComponent.tsx";
 import React from "react";
 import CategoryContext from "./contexts/CategoryContext";
+import GiftCardComponent from "./Components/GiftCardComponent.tsx";
+import FooterComponent from "./Components/FooterComponent.tsx";
 
 function App() {
   return (
@@ -28,8 +30,9 @@ function App() {
           <CategoriesComponent />
           <MenuComponent />
         </CategoryContext>
+        <GiftCardComponent />
       </main>
-      <footer>Footer Area</footer>
+      <FooterComponent />
     </div>
   );
 }
