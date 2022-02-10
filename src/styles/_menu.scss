@@ -36,6 +36,7 @@
             width: 25%;
             display: flex;
             justify-content: end;
+            align-items: center;
             &-container {
                 width: 7rem;
                 height: 7rem;
@@ -79,6 +80,56 @@
         &:hover {
             &::after {
                 border: none;
+            }
+        }
+    }
+}
+
+//Phone style
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .menu {
+        &-card {
+            width: 100%;
+        }
+        &-item {
+            &-section-image {
+                &-container {
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+            &-title {
+                line-height: 0.7;
+                font-size: 1.5rem;
+            }
+            &-cost {
+                font-size: 0.9rem;
+                margin: 0.5em 0;
+            }
+            &-desc {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+//tablet style
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .menu {
+        &-item {
+            &-section-area {
+                width: 70%;
+            }
+            &-section-image {
+                width: 30%;
+                &-container {
+                    width: 6rem;
+                    height: 6rem;
+                }
+            }
+            &-title {
+                font-size: 1.7rem;
+                height: 3rem;
             }
         }
     }
