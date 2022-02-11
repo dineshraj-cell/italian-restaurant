@@ -6,6 +6,7 @@ import React from "react";
 import CategoryContext from "./contexts/CategoryContext";
 import GiftCardComponent from "./Components/GiftCardComponent.tsx";
 import FooterComponent from "./Components/FooterComponent.tsx";
+import InformationComponent from "./Components/InformationComponent.tsx";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         </CategoryContext>
         <GiftCardComponent />
       </main>
+      <InformationComponent />
       <FooterComponent />
     </div>
   );

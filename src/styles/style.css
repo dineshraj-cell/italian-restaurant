@@ -785,6 +785,94 @@ footer .newsletter-container button:hover {
   }
 }
 
+.information {
+  background: #faf3ec;
+  padding-top: 2rem;
+}
+
+.information-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: 2rem 0rem;
+  height: 30rem;
+}
+
+.information-section-image {
+  width: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.information-section-content {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.information-section-content h2 {
+  font-family: Cardo, serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: .05rem;
+  line-height: 0.7;
+  font-size: 2rem;
+}
+
+.information-section-content p {
+  letter-spacing: .05rem;
+  line-height: 1.5;
+}
+
+.reverse {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: reverse !important;
+      -ms-flex-direction: row-reverse !important;
+          flex-direction: row-reverse !important;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .information-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 30rem;
+  }
+  .information-section-image {
+    width: 100%;
+  }
+  .information-section-content {
+    width: 100%;
+  }
+  .reverse {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .information-section {
+    height: 18rem;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -797,7 +885,7 @@ body {
   width: 80%;
 }
 
-.menu-item-cost, .menu-item-desc, .gift-rate, .gift-desc, footer .contact-desc {
+.menu-item-cost, .menu-item-desc, .gift-rate, .gift-desc, footer .contact-desc, .information-section-content p {
   font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
   font-style: normal;
