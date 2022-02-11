@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
 function FooterComponent() {
+  const [emailAddress, setEmailAddress] = useState("");
+  const inputRef = useRef(null);
+  const onLabelClicked = () => {
+    inputRef.current.focus();
+    onInputFocus();
+  };
+  const onInputBlur = () => {
+    if (emailAddress !== "") return;
+    document.getElementById("email-label").classList.remove("email-focus");
+  };
+  const onInputFocus = () => {
+    document.getElementById("email-label").classList.add("email-focus");
+  };
   return (
     <footer className="flex-center">
       <div className="view-content footer-container">
@@ -19,7 +32,19 @@ function FooterComponent() {
             <h1 className="contact-title newsletter">Newsletter</h1>
             <div className="newsletter-container">
               <div className="newsletter-item-input">
-                <input type="text" placeholder="Email address"></input>
+                <span id="email-label" onClick={onLabelClicked}>
+                  Email Address
+                </span>
+                <input
+                  ref={inputRef}
+                  onBlur={onInputBlur}
+                  onFocus={onInputFocus}
+                  type="text"
+                  value={emailAddress}
+                  onChange={(e) => {
+                    setEmailAddress(e.target.value);
+                  }}
+                ></input>
               </div>
               <div className="newsletter-item-button">
                 <button>Subscribe</button>

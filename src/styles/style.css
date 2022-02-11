@@ -703,33 +703,45 @@ footer .newsletter-container {
           flex-direction: row;
 }
 
+footer .newsletter-container .newsletter-item-input {
+  position: relative;
+}
+
+footer .newsletter-container .newsletter-item-input span {
+  color: #746b60;
+  font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: text;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
 footer .newsletter-container input {
   outline: none;
   margin: 0;
   border: none;
+  min-height: 2.5rem;
   border-bottom: 1px solid #000000;
   color: #746b60;
   font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
   font-size: 1rem;
   background-color: transparent;
-  height: 2rem;
   width: 100%;
+  z-index: 100;
 }
 
-footer .newsletter-container input::-webkit-input-placeholder {
-  color: #746b60;
-}
-
-footer .newsletter-container input:-ms-input-placeholder {
-  color: #746b60;
-}
-
-footer .newsletter-container input::-ms-input-placeholder {
-  color: #746b60;
-}
-
-footer .newsletter-container input::placeholder {
-  color: #746b60;
+footer .newsletter-container input:focus-visible {
+  -webkit-box-shadow: 0 0 0 0.4rem #faf3ec, 0 0 0 0.5rem rgba(116, 107, 96, 0.8);
+          box-shadow: 0 0 0 0.4rem #faf3ec, 0 0 0 0.5rem rgba(116, 107, 96, 0.8);
+  border-radius: 0.1rem;
+  outline: none;
+  padding: 0px;
 }
 
 footer .newsletter-container button {
@@ -742,6 +754,11 @@ footer .newsletter-container button {
 footer .newsletter-container button:hover {
   -webkit-box-shadow: 0 0 0 0.1rem #000000;
           box-shadow: 0 0 0 0.1rem #000000;
+}
+
+.email-focus {
+  top: -0.3rem !important;
+  font-size: 0.7em !important;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {

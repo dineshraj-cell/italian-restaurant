@@ -46,19 +46,36 @@ footer {
             display: flex;
             justify-content: start;
             flex-direction: row;
+            .newsletter-item-input {
+                position: relative;
+                span {
+                    color: $color-body-text;
+                    font-family: $font-body-family;
+                    position: absolute;
+                    top: 1rem;
+                    left: 0;
+                    user-select: none;
+                    cursor: text;
+                    transition: all 0.5s ease;
+                }
+            }
             input {
                 outline: none;
                 margin: 0;
                 border: none;
+                min-height: 2.5rem;
                 border-bottom: 1px solid $color-field-borders;
                 color: $color-body-text;
                 font-family: $font-body-family;
                 font-size: 1rem;
                 background-color: transparent;
-                height: 2rem;
                 width: 100%;
-                &::placeholder {
-                    color: $color-body-text;
+                z-index: 100;
+                &:focus-visible {
+                    box-shadow: 0 0 0 0.4rem $focus-offset-color, 0 0 0 0.5rem $focus-color;
+                    border-radius: 0.1rem;
+                    outline: none;
+                    padding: 0px;
                 }
             }
             button {
@@ -73,6 +90,11 @@ footer {
             }
         }
     }
+}
+
+.email-focus {
+    top: -0.3rem !important;
+    font-size: 0.7em !important;
 }
 
 //Phone style
