@@ -1,12 +1,26 @@
-1) newsletter email border animation
-2) Buttons hover bg color travel left to right animation
-3) Separate component for button, texts
-4) Separate component for information sections
-5) Subscribe functionality
-6) menu stick to top functionality
-7) menu on click modal functionality
-8) Sold out & reduced cost functionality
-9) Cover white space behind header
+Functionalities:
+----------------
 10) Add to cart functionality
 11) Cart component and swipe in from left functionality
 12) checkout functionality page
+5) Subscribe functionality
+6) menu stick to top functionality
+7) menu on click modal functionality
+5) Subscribe functionality
+8) Sold out & reduced cost functionality
+
+Bugs
+----
+9) Cover white space behind header
+
+Enhancements
+------------
+13) Optimise the css
+3) Separate component for button, texts
+4) Separate component for information sections
+2) Buttons hover bg color travel left to right animation
+
+Completed
+---------
+1) newsletter email border animation - DONE
+14) Animate on Scroll - Done

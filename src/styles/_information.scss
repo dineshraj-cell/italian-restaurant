@@ -17,6 +17,8 @@
             width: 40%;
             display: flex;
             align-items: center;
+            opacity: 0;
+            transition: opacity 500ms;
             h2 {
                 font-family: $font-heading-family;
                 font-weight: $font-heading-weight;
@@ -36,6 +38,14 @@
 
 .reverse {
     flex-direction: row-reverse !important;
+}
+
+.scrolled.slide-left {
+    animation: slide-in-left 1s ease-in-out both;
+}
+
+.scrolled.slide-right {
+    animation: slide-in-right 1s ease-in-out both;
 }
 
 //Phone style
