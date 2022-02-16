@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useCategory } from "../contexts/CategoryContext";
 import { MENU } from "../dataset";
 import { Menu } from "../Interface/MenuInterface";
+import MenuItemModal from "./MenuItemModal";
 
 function MenuComponent() {
   const activeCategory = useCategory();
+  const [openMenuDialog, setOpenMenuDialog] = useState(false);
   const [menuItems, setMenuItems] = useState([]);
 
   useEffect(() => {
@@ -17,12 +19,24 @@ function MenuComponent() {
     return title.toLowerCase().replace(/\s/g, "");
   };
 
+  const handleMenuDialogOpen = () => {
+    setOpenMenuDialog(true);
+  };
+
+  const handleMenuDialogClose = () => {
+    setOpenMenuDialog(false);
+  };
+
   return (
     <section className="flex-center menu">
       <div className="view-content menu-container">
         {menuItems.map((item: Menu, index: any) => {
           return (
-            <div key={`menu-item-${index}`} className="menu-card">
+            <div
+              key={`menu-item-${index}`}
+              className="menu-card"
+              onClick={handleMenuDialogOpen}
+            >
               <div className="menu-item">
                 <div className="menu-item-section-area">
                   <h2 className="menu-item-title">{item.food}</h2>
@@ -44,6 +58,10 @@ function MenuComponent() {
           );
         })}
       </div>
+      <MenuItemModal
+        open={openMenuDialog}
+        handleClose={handleMenuDialogClose}
+      />
     </section>
   );
 }

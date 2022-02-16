@@ -11,7 +11,7 @@ Functionalities:
 
 Bugs
 ----
-9) Cover white space behind header
+
 
 Enhancements
 ------------
@@ -24,3 +24,4 @@ Completed
 ---------
 1) newsletter email border animation - DONE
 14) Animate on Scroll - Done
+9) Cover white space behind header - Done

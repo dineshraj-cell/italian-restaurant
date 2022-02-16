@@ -4,6 +4,7 @@
 @import './margin';
 @import './align';
 @import './button';
+@import './dialog';
 @import './header';
 @import './banner';
 @import './category';
@@ -16,6 +17,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: $font-heading-family;
+    background: linear-gradient(180deg, $color-secondary-background 70%, $color-background 0%);
 }
 
 .view-content {
