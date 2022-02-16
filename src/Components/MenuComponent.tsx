@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useCategory } from "../contexts/CategoryContext";
 import { MENU } from "../dataset";
 import { Menu } from "../Interface/MenuInterface";
+import { titleToImageName } from "../utils";
 import MenuItemModal from "./MenuItemModal";
 
 function MenuComponent() {
@@ -15,10 +16,6 @@ function MenuComponent() {
       MENU.filter((item: Menu) => item.category_id === activeCategory.id)
     );
   }, [activeCategory]);
-
-  const titleToImageName = (title: String) => {
-    return title.toLowerCase().replace(/\s/g, "");
-  };
 
   const handleMenuDialogOpen = (item: Menu) => {
     setOpenMenuDialog(true);

@@ -224,7 +224,7 @@
           align-items: center;
 }
 
-.btn, .gift-button, footer .newsletter-container button {
+.btn, .dialog-menu-content-cart-button, .gift-button, footer .newsletter-container button {
   padding: 0;
   border: 0;
   -webkit-user-select: none;
@@ -297,10 +297,25 @@
           align-items: center;
 }
 
+.dialog-header-title {
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+}
+
 .dialog-content {
   width: 100%;
   height: calc(100% - 5rem);
   overflow-y: auto;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .dialog-modal {
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+  }
 }
 
 header {
@@ -624,6 +639,140 @@ header {
   border: none;
 }
 
+.dialog-menu-content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.dialog-menu-content-text {
+  width: 40%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.dialog-menu-content-image {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dialog-menu-content img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+}
+
+.dialog-menu-content-title {
+  font-family: Cardo, serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: .05rem;
+  line-height: 0.7;
+  font-size: 2rem;
+  margin: 0.5em 0em;
+}
+
+.dialog-menu-content-rate {
+  letter-spacing: .05rem;
+}
+
+.dialog-menu-content-cart-button {
+  margin: 1rem 0rem;
+  width: 100%;
+  padding: 1.2em 2.4em;
+  font-weight: 700;
+  border: 1px solid #000000;
+}
+
+.dialog-menu-content-cart-button:hover {
+  -webkit-box-shadow: 0 0 0 0.1rem #000000;
+          box-shadow: 0 0 0 0.1rem #000000;
+}
+
+.dialog-menu-content p {
+  letter-spacing: .05rem;
+  line-height: 1.5;
+}
+
+.dialog-menu-content-quantity {
+  width: 100%;
+  border-bottom: 1px solid #000000;
+  padding: 0.5rem 0;
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.dialog-menu-content-quantity label {
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.dialog-menu-content-quantity .quantity-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dialog-menu-content-quantity .quantity-control button {
+  color: #746b60;
+}
+
+.dialog-menu-content-quantity .quantity-control input {
+  outline: none;
+  margin: 0;
+  border: none;
+  color: black;
+  font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+  font-size: 1rem;
+  background-color: transparent;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 1rem;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.dialog-menu-content-quantity .quantity-control input:focus-visible {
+  outline: none;
+  padding: 0px;
+}
+
+.dialog-menu-content-quantity .quantity-control input::-webkit-outer-spin-button, .dialog-menu-content-quantity .quantity-control input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   .menu-card {
     width: 100%;
@@ -642,6 +791,18 @@ header {
   }
   .menu-item-desc {
     font-size: 0.9rem;
+  }
+  .dialog-menu-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .dialog-menu-content-text {
+    width: 100%;
+  }
+  .dialog-menu-content-image {
+    width: 100%;
   }
 }
 
@@ -663,6 +824,18 @@ header {
   .menu-item-desc {
     -webkit-line-clamp: 3;
     height: 4rem;
+  }
+  .dialog-menu-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .dialog-menu-content-text {
+    width: 100%;
+  }
+  .dialog-menu-content-image {
+    width: 100%;
   }
 }
 
@@ -1030,7 +1203,7 @@ body {
   width: 80%;
 }
 
-.menu-item-cost, .menu-item-desc, .gift-rate, .gift-desc, footer .contact-desc, .information-section-content p {
+.dialog-header-title, .menu-item-cost, .menu-item-desc, .dialog-menu-content-rate, .dialog-menu-content p, .gift-rate, .gift-desc, footer .contact-desc, .information-section-content p {
   font-family: Helvetica, "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
   font-style: normal;
