@@ -280,6 +280,7 @@
           box-shadow: 0 0 45px rgba(0, 0, 0, 0.2);
   z-index: 1;
   padding: 0 4rem;
+  height: 80%;
 }
 
 .dialog-header {
@@ -294,6 +295,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.dialog-content {
+  width: 100%;
+  height: calc(100% - 5rem);
+  overflow-y: auto;
 }
 
 header {

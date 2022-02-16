@@ -7,6 +7,7 @@ import MenuItemModal from "./MenuItemModal";
 function MenuComponent() {
   const activeCategory = useCategory();
   const [openMenuDialog, setOpenMenuDialog] = useState(false);
+  const [selectedMenuItem, setSelectedMenuItem] = useState<Menu | {}>({});
   const [menuItems, setMenuItems] = useState([]);
 
   useEffect(() => {
@@ -19,8 +20,9 @@ function MenuComponent() {
     return title.toLowerCase().replace(/\s/g, "");
   };
 
-  const handleMenuDialogOpen = () => {
+  const handleMenuDialogOpen = (item: Menu) => {
     setOpenMenuDialog(true);
+    setSelectedMenuItem(item);
   };
 
   const handleMenuDialogClose = () => {
@@ -35,7 +37,7 @@ function MenuComponent() {
             <div
               key={`menu-item-${index}`}
               className="menu-card"
-              onClick={handleMenuDialogOpen}
+              onClick={() => handleMenuDialogOpen(item)}
             >
               <div className="menu-item">
                 <div className="menu-item-section-area">
@@ -61,6 +63,7 @@ function MenuComponent() {
       <MenuItemModal
         open={openMenuDialog}
         handleClose={handleMenuDialogClose}
+        data={selectedMenuItem}
       />
     </section>
   );
